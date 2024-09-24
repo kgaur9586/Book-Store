@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booklist</title>
+    <style>
+        body {
+            background-color: #d2b48c; /* Antique background color */
+            font-family: Arial, sans-serif; /* Specify a fallback font-family */
+            margin: 0; /* Remove default margins */
+            padding: 0; /* Remove default padding */
+        }
+        
+        .container {
+            max-width: 800px; /* Limit container width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px; /* Add padding to the container */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #4c2f27; /* Complementary text color */
+        }
+        
+        form {
+            margin-bottom: 20px; /* Add space between form and table */
+        }
+        
+        label {
+            display: block; /* Make labels block elements for better spacing */
+            margin-bottom: 5px; /* Add space between labels */
+        }
+        
+        input[type="text"] {
+            width: 100%; /* Make text inputs full-width */
+            padding: 8px; /* Add padding to text inputs */
+            margin-bottom: 10px; /* Add space between text inputs */
+            box-sizing: border-box; /* Include padding in input's total width */
+        }
+        
+        input[type="submit"] {
+            width: 100%; /* Make submit button full-width */
+            padding: 10px; /* Add padding to submit button */
+            background-color: #4c2f27; /* Dark brown button color */
+            color: #fff; /* Button text color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #6d493c; /* Darker brown on hover */
+        }
+        
+        table {
+            width: 100%; /* Make table full-width */
+            border-collapse: collapse; /* Collapse table borders */
+        }
+        
+        th, td {
+            padding: 8px; /* Add padding to table cells */
+            text-align: left; /* Align text to left within cells */
+            border-bottom: 1px solid #ccc; /* Add bottom border to cells */
+        }
+        
+        th {
+            background-color: #6d493c; /* Dark brown header background color */
+            color: #fff; /* Header text color */
+        }
+        .alert-danger{
+            background-color: rgb(255, 55, 0);
+            text-align: center;
+            
+        }
+        .alert-success{
+            background-color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>My Booklist</h1>
+        <form action="" id="book-form">
+            <div id="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form">
+            </div>
+            <div id="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form">
+            </div>
+            <div id="form-group">
+                <label for="no">Number</label>
+                <input type="text" id="no" class="form">
+            </div>
+            <input type="submit" value="Add Book" class="submit">
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>
